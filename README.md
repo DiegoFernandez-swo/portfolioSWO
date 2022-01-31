@@ -1,0 +1,2 @@
+# portfolioSWO
+first codecademy project
