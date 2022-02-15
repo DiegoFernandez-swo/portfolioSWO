@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/brands.css">
     <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/solid.css">
-    <!-- JavaScript -->    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <title>Diego Fernández Portfolio</title>
 </head>
 
@@ -23,10 +27,10 @@
                         alt=""></a>
             </div>
             <ul class="menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="burguer-menu">About</a></li>
+                <li><a href="#skills" class="burguer-menu">Skills</a></li>
+                <li><a href="#projects" class="burguer-menu">Projects</a></li>
+                <li><a href="#contact" class="burguer-menu">Contact</a></li>
             </ul>
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
@@ -34,7 +38,7 @@
         </div>
     </nav>
     <!-- Intro  -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="max-width">
             <div class="intro_content">
                 <h2>Hi everyone!<br>I'm <span>Diego Fernández </span></h2>
@@ -46,6 +50,103 @@
                     pharetra sit
                     amet, bibendum vitae nunc.</p>
                 <a href="#">Know More</a>
+            </div>
+        </div>
+    </section>
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About me</h2>
+            <div class="about_content">
+                <div class="column left">
+                    <img src="/assets/images/sample1.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">I'm Diego and I'm a <span></span></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, corrupti alias cum maiores
+                        commodi quidem sunt expedita perferendis non odit. Ratione excepturi voluptate autem modi
+                        voluptates minima harum doloremque natus, esse, reiciendis cupiditate ipsum earum veritatis,
+                        eos in voluptatum ullam corporis magni perspiciatis reprehenderit hic saepe libero? Deleniti
+                        nostrum porro ut cumque nulla. Ullam molestias adipisci, asperiores fugit error quas!</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">Skills</h2>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="max-width">
+            <h2 class="title">My projects</h2>
+            <div class="carousel owl-carousel owl-theme">
+                <div class="card">
+                    <div class="box">
+                        <img src="/assets/images/codecademy.png" alt="">
+                        <div class="text">Project 1</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="/assets/images/codecademy.png" alt="">
+                        <div class="text">Project 2</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="/assets/images/codecademy.png" alt="">
+                        <div class="text">Project 3</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="/assets/images/codecademy.png" alt="">
+                        <div class="text">Project 4</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in touch</div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In illo necessitatibus impedit iste quibusdam, accusantium nam ea hic nihil repellendus!</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Diego Fdez Ortega</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Adress</div>
+                                <div class="sub-title">Ponferrada, Spain</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">diego.fernandez@softwareone.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
