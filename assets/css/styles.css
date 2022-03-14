@@ -113,17 +113,13 @@ section .title::after{
   display: none;
 }
 /* Intro */
-.intro{
-  display: flex;
+.intro{  
   background: url("/assets/images/stars-964022.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;  
+  height: 70vh;  
   text-align: justify;
-}
-.intro .max-width{
-  margin: auto 30px;
 }
 .intro span{
   color: #4cc9f0;
@@ -141,35 +137,39 @@ section .title::after{
   background: none;
   color: white;
 }
+.intro .intro_content h2{
+  margin-bottom: 10px;
+}
 /* About */
 .about{
   background-color: black;  
 }
-.about .about_content,
+.about_content,
 .contact .contact-content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
-.about .about_content .right{
-  width: 55%;
+.about_content .right{
+  width: 58%;
   color: white;
   text-align: justify;
 }
-.about .about_content .right .text{
+.about_content .right .text{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;  
 }
-.about .about_content .left{
-  width: 45%;
+.about_content .left{
+  width: 40%;  
+  text-align: center;
 }
-.about .about_content .left img{
+.about_content .left img{
   height: 400px;
   width: 400px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 6px;  
 }
 .about .title::after{
   content: "who I am";
@@ -177,7 +177,35 @@ section .title::after{
 
 /* Skills */
 .skills .title::after{
-  content: "work in progress";
+  content: "what I know";
+}
+.skills{
+  text-align: center;
+}
+.skills_content .text{
+  margin-bottom: 30px;
+}
+.skills_content img{
+  padding: 1rem;
+}
+.skills_content .row1 .icon{
+  width: 11.875rem;
+  height: 11.875rem;
+}
+.skills_content .row2 .icon{
+  width: 10rem;
+  height: 10rem;
+}
+.skills_content .row3 .icon{
+  width: 8rem;
+  height: 8rem;
+}
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px #a17a69;  
+  padding: 20px;
+  margin: 10px;  
 }
 /* Projects */
 .projects .title::after{
@@ -225,7 +253,7 @@ section .title::after{
 
 /* Contact */
 .contact .title:after{
-  content: "Get in touch";
+  content: "Reach me";
 }
 .contact .contact-content .column{
   width: 100%;
@@ -260,6 +288,49 @@ section .title::after{
   color: beige;
 }
 
+/* Social Icons */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 40%;
+  z-index: 998;
+}
+.wrapper ul {
+  list-style: none;
+}
+.wrapper ul li {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  margin: 15px 10px;
+  text-align: center;
+  cursor: pointer;  
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-github {
+  color: rgb(155, 48, 155);
+  text-shadow: 0 0 15px #9b309b;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-google {
+  color: #dd4b39;
+  text-shadow: 0 0 15px #dd4b39;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-linkedin {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-whatsapp {
+  color: #4dc247;
+  text-shadow: 0 0 15px #4dc247;
+  transition: all 0.5s ease;
+}
+
+
 /* Footer */
 footer{
   text-align: center;
@@ -276,34 +347,28 @@ footer a{
 
 
 /* Responsive */
-@media (max-width: 1330px){
+@media (max-width: 1444px){
   .nav li a{
     font-size: 25px;
   }
-  .intro .max-width{
-    margin-left: 0px;
-  }
-  .intro_content h2{
+  .max-width{
+    margin-left: 0px;    
+  }  
+  .intro_content h2, .about_content .right .text, .contact-content .left .text{
     font-size: 30px;
   }
-  .intro_content p{
+  .intro_content p, .about_content .right p, .contact-content .left p, .skills_content .text p{
     font-size: 20px;
   }
   .about, .skills, .projects, .contact {
     padding-top: 150px;
-  }
+  }  
 }
 
-@media (max-width: 1104px){
+@media (max-width: 1225px){
   .nav li a{
     font-size: 22px;
-  }
-  .intro .intro_content h2{
-    font-size: 25px;    
-  }
-  .intro .intro_content p{
-    font-size: 15px;
-  }
+  } 
   .about .about_content .left img{
     height: 350px;
     width: 350px;   
@@ -311,8 +376,24 @@ footer a{
   .about, .skills, .projects, .contact {
     padding-top: 130px;
   }
+  .wrapper ul li{
+    font-size: 15px;
+    margin: 10px;
+  }
 }
 
+@media (max-width: 1101px){
+  .about .about_content .left img{
+    height: 315px;
+    width: 315px;
+  }  
+  .about .about_content .right .text{
+    font-size: 24px;
+  }
+  .about .about_content .right p{
+    font-size: 14px;
+  }
+}
 @media (max-width: 991px){
   .intro .max-width{
     margin: auto 30px;
@@ -320,7 +401,7 @@ footer a{
   }
   .about, .skills, .projects, .contact {
     padding-top: 110px;
-  }
+  }  
 }
 
 @media (max-width: 947px){
@@ -331,9 +412,20 @@ footer a{
   .intro .intro_content p{
     font-size: 14px;
   }
+  .contact-content .left .text{
+    font-size: 24px;
+  }
+  .contact-content .left p, .skills_content .text p{
+    font-size: 14px;
+  }
+  .wrapper ul li{
+    font-size: 12px;
+    margin-right: 7.5px;
+  }
   .max-width{
-    max-width: 800px;
-    padding: 0 25px;
+    /* max-width: 800px; */
+    margin: auto 30px;
+    padding: 0 30px;
   }
   .burger-menu{
     display: block;
@@ -383,22 +475,7 @@ footer a{
   @media (max-width: 690px){  
     .max-width{
       padding: 0 23px;
-    }
-    .intro .intro_content h2{
-      font-size: 20px;
-    }
-    .intro .intro_content p{
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 500px){  
-    .intro .intro_content h2{
-      font-size: 18px;
-    }
-    .intro .intro_content p{
-      font-size: 10px;
-    }
+    }   
   }
   
 }
