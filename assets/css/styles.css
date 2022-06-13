@@ -114,7 +114,7 @@ section .title::after{
 }
 /* Intro */
 .intro{  
-  background: url("/assets/images/stars-964022.png");
+  background: url("../images/stars-964022.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
